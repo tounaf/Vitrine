@@ -1,8 +1,11 @@
 $(document).ready(function () {
-
-    var carousel = $('#carousel');
-    console.log(carousel);
     
+    var carousel = $('#carousel');
+    console.log("gggg" +carousel);
+    $('.btn').click(function(){
+      $(this).hide();
+      alert("hhh");
+    })
     var img = $('#carousel img');
     var indexElement = img.length - 1 ;
     var i = 0;
