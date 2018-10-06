@@ -7,10 +7,22 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/home.scss">
   </head>
 
-  <body>
-
+  <body;>
+  	<nav>
+    	<section id="devant"><img src="/assets/sary/l2.jpg" width="80" height="80"></section>
+		<section id="derriere"><img src="/assets/sary/l1.jpg" width="80" height="80"></section>
+		<button><a href="/">Presentation</a></button>
+		<button><a href="/mission">Mission</a></button>
+		<button><a href="/realisation">Realisation</a></button>
+		<button><a href="/partenaire">Partenaire</a></button>	
+		<button><a href="/garanties">Garanties</a></button>	
+		<button><a href="/contact">Contant</a></button>
+	</nav>
+<br><br><br>
   	<%= yield %>
 </body>
 </html>

@@ -5,5 +5,17 @@ class HomeController < ApplicationController
 	end
 	
 	def mission
+	end
+
+	def realisation
+	end
+
+	def partenaire
+	end
+
+	def garanties
 	end	
+
+	def contact
+	end
 end	

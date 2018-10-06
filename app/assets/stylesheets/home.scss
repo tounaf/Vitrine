@@ -1,7 +1,7 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-header{
+nav{
 	height:70px;
 	padding:0px;
 	margin: 0px;
@@ -27,10 +27,9 @@ section{
 	backface-visibility: hidden;
 
 }
-.btn{
+button{
 	margin: 0px;
-	padding: 9px;
-	color:white;
+	padding: 3px;
 	background-color: blink;
 	margin-top: 40px;
 	margin-left: 5px;
