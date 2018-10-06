@@ -1,0 +1,21 @@
+p {
+    background-color: black;
+}
+
+.img {
+border-radius: 70pt;
+width: 200px ;
+height: 200px;    
+    /* source | slice */
+border-image: linear-gradient(red, blue) 27;
+
+/* source | slice | repeat */
+/*border-image: url("/images/border.png") 27 space;*/
+
+/* source | slice | width */
+border-image: linear-gradient(red, blue) 27 / 35px;
+
+/* source | slice | width | outset | repeat */
+/*border-image: url("/images/border.png") 27 23 / 50px 30px / 1rem round space;
+*/
+}
