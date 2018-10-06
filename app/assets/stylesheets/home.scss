@@ -62,7 +62,7 @@ article#slider figure{
 	position: relative;
 	width: 50%;
 	margin: 0;
-	padding: 0;
+	// padding: 0;
 	font-size: 0;
 	text-align: left;
 }
@@ -108,10 +108,7 @@ article#slider{
 article#slider figure{
 	position: relative;
 	width: 500%;
-	margin: 0;
-	padding: 0;
 	font-size: 0;
-	left: 0;
 	text-align: left;
 	animation: 15s slidy infinite;
 }
@@ -119,18 +116,15 @@ article{
 	width: 700px;
 	height: 400px;
 	position: absolute;
-	top: 150px;
-	left: 300px;
 	border: 2px, solid #444;
 	text-align: center;
 	font-size: 1.3em;
 	font-family: arial, sans-serif;
 	transition: 2s;
-	backface-visibility: hidden;
+	backface-visibility: visible;
 }
-aside{
+.aside{
 	
-	padding-left: 80px;
 	margin-top: 450px;
 }
 footer{
