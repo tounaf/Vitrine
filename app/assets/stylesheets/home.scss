@@ -1,28 +1,46 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-nav{
+headers{
 	height:70px;
 	width:1200px;
-	padding:0px;
+	padding:40px;
 	margin: 0px;
 	z-index: 100;
 	background-color: white;
 	text-align: right;
-	height: 100px;
+	height: 80px;
 }
-nav:hover{
-	background-image: linear-gradient(yellow,white); 
+nav{
+	background-color: #a1a1a1;
+	height:40px;
+	text-align:right;
+	letter-spacing:1px;	
+	padding:10px;
+}
+font:hover{
+	color:green;
+}
+a:hover{
+	color:green;
+}
+h4{
+	font-family: FreeMono;
+	letter-spacing:3px;	
+}
+h2{
+	letter-spacing:3px;
+	font-family: fontawesome;
 }
 body{
-	background-color: blue;
+	background-color: #f1f1f1;
 }
 section{
-	width: 70px;
-	height: 70px;
+	width: 50px;
+	height: 50px;
 	position: absolute;
 	top: 20px;
-	left: 20px;
+	left: 40px;
 	border: 2px, solid #444;
 	text-align: center;
 	font-size: 1.3em;
@@ -30,16 +48,6 @@ section{
 	transition: 2s;
 	backface-visibility: hidden;
 
-}
-button{
-	margin: 0px;
-	padding: 3px;
-	background-color: blue;
-	margin-top: 40px;
-	margin-left: 5px;
-}
-button:hover{
-	background-color: orange;
 }
 #devant{
 	z-index: 100;
