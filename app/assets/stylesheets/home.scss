@@ -3,12 +3,16 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 nav{
 	height:70px;
+	width:1200px;
 	padding:0px;
 	margin: 0px;
 	z-index: 100;
 	background-color: white;
 	text-align: right;
 	height: 100px;
+}
+nav:hover{
+	background-image: linear-gradient(yellow,white); 
 }
 body{
 	background-color: blue;
@@ -30,10 +34,12 @@ section{
 button{
 	margin: 0px;
 	padding: 3px;
-	background-color: blink;
+	background-color: blue;
 	margin-top: 40px;
 	margin-left: 5px;
-
+}
+button:hover{
+	background-color: orange;
 }
 #devant{
 	z-index: 100;
@@ -49,9 +55,6 @@ button{
 }
 #devant:hover + #derriere{
 	transform: rotateY(180deg);
-}
-button:hover{
-	background-color: yellow;
 }
 article#slider{
 	width: 50%;
