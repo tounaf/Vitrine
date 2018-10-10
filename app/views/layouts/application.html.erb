@@ -16,24 +16,45 @@
   </head>
 
   <body>
-    <div class="nav navbar nav">
-      	<nav>
-            <section id="devant"><img src="/assets/sary/l2.jpg" width="80" height="80"></section>
-        		<section id="derriere"><img src="/assets/sary/l1.jpg" width="80" height="80"></section>
-        		<a class="item-nav" href="/">Presentation</a>
-        		<a class="item-nav" href="/mission">Mission</a>
-        		<a class="item-nav" href="/realisation">Realisation</a>
-        		<a class="item-nav" href="/partenaire">Partenaire</a>	
-        		<a class="item-nav" href="/garanties">Garanties</a>	
-        		<a class="item-nav" href="/contact">Contact</a>
-    	</nav>
-  </div>
+    <div class="row">
+      	<headers class="col-md-1 offset-0">
+            <section id="devant"><img src="/assets/sary/l2.jpg" width="60" height="60"></section>
+        		<section id="derriere"><img src="/assets/sary/l1.jpg" width="60" height="60"></section>
+        </headers>   
+        <headers class="col-md-3 offset-0">  
+            <h2><a href="/"> www.tranoko<font color="green">.mg </font></a></h2>
+        </headers>    
+        <headers class="col-md-8 offset-0">    
+            <h4>bienvenu sur notre site internet&nbsp;&nbsp; </h4> 
+        </headers>    
+    </div>  
+
+        <nav class="col-md-12 offset-0 "> 
+        		<a href="/"><font color="white"> PRESENTATION</font></a>&nbsp;&nbsp;&nbsp; 
+        		<a href="/mission"><font color="white">MISSION</font></a>&nbsp;&nbsp;&nbsp;
+        		<a href="/realisation"><font color="white">REALISATION</font></a>&nbsp;&nbsp;&nbsp;  
+        		<a href="/partenaire"><font color="white">PARTENAIRE</font></a>&nbsp;&nbsp;&nbsp;  
+        		<a href="/garanties"><font color="white">GARANTIES</font></a>&nbsp;&nbsp;&nbsp;	  
+        		<a href="/contact"><font color="white">CONTACT</font></a>&nbsp;&nbsp;&nbsp;  
+        </nav>   
+
 <br><br><br>
-    
-  	<%= yield %>
-    <footer>
+    <div class="yield">
+  	  <%= yield %>
+    </div>
+    <footer class="fixed-bottom">
 			bienvenue sur notre site
 		</footer>	
-
+<script type="text/javascript">
+    $(document).ready(function() {
+      $(window).scroll(function(){
+         $('nav').addClass("fixed-top");
+      });
+      $(window).scrollTop(function(){
+         $('nav').removeClass("fixed-top");
+      })
+      
+    })
+</script>
 </body>
 </html>
