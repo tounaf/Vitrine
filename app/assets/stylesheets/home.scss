@@ -11,6 +11,9 @@ nav{
 	text-align: right;
 	height: 100px;
 }
+.item-nav:hover{
+	background-color: transparent;
+}
 nav:hover{
 	background-image: linear-gradient(yellow,white); 
 }
