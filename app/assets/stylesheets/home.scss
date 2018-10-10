@@ -12,10 +12,18 @@ headers{
 nav{
 	height:60px;
 	background-color: transparentize($color: #a1a1a1, $amount: 0.2);
+<<<<<<< HEAD
 	text-align:right;
 	letter-spacing:1px;	
 	padding:30px;
 	border-bottom: 1px solid blue;
+=======
+	height:60px;
+	text-align:right;
+	letter-spacing:1px;	
+	padding:30px;
+	border-bottom: 1px solid transparentize($color: blue, $amount: 0);
+>>>>>>> b8bb76cc1cc25a08cf692d99430b9c48128a4d37
 }
 font:hover{
 	color:#de4;
@@ -152,3 +160,41 @@ footer{
 	border-top: 1px solid green;
 
 }	
+
+
+@-webkit-keyframes myAnnimation {
+	0% {
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(150px);
+	}
+
+	100% {
+		transform: translateY(150px);
+	}
+}
+
+@-webkit-keyframes myAnnimation1 {
+	100% {
+		transform: translateY(100px);
+	}
+	50% {
+		transform: translateY(150px);
+	}
+
+	0% {
+		transform: translateY(0px);
+	}
+}
+
+
+// #carousel {
+// 	animation: myAnnimation 3s;
+// 	animation-direction: alternate-reverse;
+// }
+// #carousel1 {
+
+// 	animation: myAnnimation 3s;
+// 	animation-direction: alternate;
+// }
