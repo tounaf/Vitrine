@@ -8,7 +8,7 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" type="text/css" href="assets/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/home.scss">
+    <link rel="stylesheet" type="text/css" href="assets/home.css">
     <link rel="stylesheet" href="/assets/style.css" >
     <script type="text/javascript" src="/assets/animation.js"></script>
     <script type="text/javascript" src="/assets/jquery.js"></script>
@@ -16,20 +16,18 @@
   </head>
 
   <body>
-    <div class="row">
-      	<headers class="col-md-1 offset-0">
-            <section id="devant"><img src="/assets/sary/l2.jpg" width="60" height="60"></section>
-        		<section id="derriere"><img src="/assets/sary/l1.jpg" width="60" height="60"></section>
-        </headers>   
-        <headers class="col-md-3 offset-0">  
-            <h2><a href="/"> www.tranoko<font color="green">.mg </font></a></h2>
+    <div class="row">  
+        <headers class="col-md-4 offset-0">  
+            <h2><a href="/"> www.haintso-trano<font color="green">.com </font></a></h2>
         </headers>    
-        <headers class="col-md-8 offset-0">    
+        <headers class="col-md- offset-0">    
             <h4>bienvenu sur notre site internet&nbsp;&nbsp; </h4> 
         </headers>    
     </div>  
 
         <nav class="col-md-12 offset-0"> 
+            <section id="devant"><img src="/assets/sary/l2.jpg" width="60" height="60"></section>
+            <section id="derriere"><img src="/assets/sary/l1.jpg" width="60" height="60"></section>
         		<a href="/"><font color="white"> PRESENTATION</font></a>&nbsp;&nbsp;&nbsp; 
         		<a href="/mission"><font color="white">MISSION</font></a>&nbsp;&nbsp;&nbsp;
         		<a href="/realisation"><font color="white">REALISATION</font></a>&nbsp;&nbsp;&nbsp;  
@@ -40,9 +38,9 @@
 
 <br><br><br>
   	<%= yield %>
-    <footer>
-			bienvenue sur notre site
-		</footer>	
-
+        <footer class="btn btn-danger">
+        
+			
+		    </footer>	
 </body>
 </html>
