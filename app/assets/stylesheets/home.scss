@@ -15,16 +15,20 @@ nav{
 	text-align:right;
 	letter-spacing:1px;	
 	padding:30px;
+	border-bottom: 1px solid blue;
 }
 font:hover{
-	color:green;
+	color:#de4;
+	cursor:progress;
 }
 a:hover{
 	color:green;
+	text-decoration:none;
 }
 h4{
 	font-family: FreeMono;
 	letter-spacing:3px;	
+
 }
 h2{
 	letter-spacing:3px;
@@ -48,6 +52,7 @@ section{
 	font-family: arial, sans-serif;
 	transition: 2s;
 	backface-visibility: hidden;
+
 
 }
 #devant{
@@ -144,5 +149,6 @@ footer{
 	text-align:center;
 	height: 100px;
 	padding: 15px;
+	border-top: 1px solid green;
 
 }	
