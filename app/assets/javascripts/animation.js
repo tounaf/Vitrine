@@ -1,5 +1,6 @@
 // $(document).ready(function () {
 
+
 //     var carousel = $('#carousel');
 //     console.log(carousel);
     
@@ -7,6 +8,19 @@
     // var indexElement = img.length - 1 ;
     // var i = 0;
     // console.log(img.length);
+
+    
+//     var carousel = $('#carousel');
+//     console.log("gggg" +carousel);
+//     $('.btn').click(function(){
+//       $(this).hide();
+//       alert("hhh");
+//     })
+//     var img = $('#carousel img');
+//     var indexElement = img.length - 1 ;
+//     var i = 0;
+//     console.log(img.length);
+
     
 //     var current = img.eq(i);
 //     img.css('display','none');

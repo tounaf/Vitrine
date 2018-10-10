@@ -20,10 +20,11 @@
         <headers class="col-md-4 offset-0">  
             <h2><a href="/"> www.haintso-trano<font color="green">.com </font></a></h2>
         </headers>    
-        <headers class="col-md- offset-0">    
+        <headers class="col-md-8 offset-0">    
             <h4>bienvenu sur notre site internet&nbsp;&nbsp; </h4> 
         </headers>    
     </div>  
+
 
         <nav class="col-md-12 offset-0"> 
             <section id="devant"><img src="/assets/sary/l2.jpg" width="60" height="60"></section>
@@ -37,10 +38,22 @@
         </nav>   
 
 <br><br><br>
-  	<%= yield %>
-        <footer class="btn btn-danger">
-        
-			
-		    </footer>	
+    <div class="yield">
+  	  <%= yield %>
+    </div>
+    <footer class="fixed-bottom">
+			bienvenue sur notre site
+		</footer>	
+<script type="text/javascript">
+    $(document).ready(function() {
+      $(window).scroll(function(){
+         $('nav').addClass("fixed-top");
+      });
+      $(window).scrollTop(function(){
+         $('nav').removeClass("fixed-top");
+      })
+      
+    })
+</script>
 </body>
 </html>
