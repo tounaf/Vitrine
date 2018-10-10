@@ -13,10 +13,11 @@ headers{
 }
 nav{
 	background-color: transparentize($color: #a1a1a1, $amount: 0.2);
-	height:40px;
+	height:60px;
 	text-align:right;
 	letter-spacing:1px;	
-	padding:10px;
+	padding:30px;
+	border-bottom: 1px solid transparentize($color: blue, $amount: 0);
 }
 font:hover{
 	color:green;
@@ -145,3 +146,41 @@ footer{
 	padding: 15px;
 
 }	
+
+
+@-webkit-keyframes myAnnimation {
+	0% {
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(150px);
+	}
+
+	100% {
+		transform: translateY(150px);
+	}
+}
+
+@-webkit-keyframes myAnnimation1 {
+	100% {
+		transform: translateY(100px);
+	}
+	50% {
+		transform: translateY(150px);
+	}
+
+	0% {
+		transform: translateY(0px);
+	}
+}
+
+
+// #carousel {
+// 	animation: myAnnimation 3s;
+// 	animation-direction: alternate-reverse;
+// }
+// #carousel1 {
+
+// 	animation: myAnnimation 3s;
+// 	animation-direction: alternate;
+// }
