@@ -7,32 +7,65 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <link rel="stylesheet" type="text/css" href="assets/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/home.scss">
+    <link rel="stylesheet" type="text/css" href="/assets/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/home.scss">
+    <link rel="stylesheet" type="text/css" href="/assets/mission.scss">
     <link rel="stylesheet" href="/assets/style.css" >
+    <link rel="stylesheet" type="text/css" href="assets/contact.css">
+    <link rel="stylesheet" type="text/css" href="assets/examples.css">
+    <link rel="stylesheet" type="text/css" href="assets/jquery.multiscroll.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script type="text/javascript" src="/assets/animation.js"></script>
     <script type="text/javascript" src="/assets/jquery.js"></script>
-    <link rel="stylesheet" type="text/css" href="assets/contact.css">
+    
   </head>
 
   <body>
-    <div class="nav navbar nav">
-      	<nav>
-            <section id="devant"><img src="/assets/sary/l2.jpg" width="80" height="80"></section>
-        		<section id="derriere"><img src="/assets/sary/l1.jpg" width="80" height="80"></section>
-        		<a href="/"><button>Presentation</button></a>
-        		<a href="/mission"><button>Mission</button></a>
-        		<a href="/realisation"><button>Realisation</button></a>
-        		<a href="/partenaire"><button>Partenaire</button></a>	
-        		<a href="/garanties"><button>Garanties</button></a>	
-        		<a href="/contact"><button>Contact</button></a>
-    	</nav>
-  </div>
+    <div class="row">  
+        <headers class="col-md-4 offset-0">  
+            <h2><a href="/"> www.haintso-trano<font color="green">.com </font></a></h2>
+        </headers>    
+        <headers class="col-md-8 offset-0">    
+            <h4>bienvenu sur notre site internet&nbsp;&nbsp; </h4> 
+        </headers>    
+    </div>  
+
+
+        <nav class="col-md-12 offset-0"> 
+            <section id="devant"><img src="/assets/sary/l2.jpg" width="60" height="60"></section>
+            <section id="derriere"><img src="/assets/sary/l1.jpg" width="60" height="60"></section>
+        		<a href="/"><font color="white"> PRESENTATION</font></a>&nbsp;&nbsp;&nbsp; 
+        		<a href="/mission"><font color="white">MISSION</font></a>&nbsp;&nbsp;&nbsp;
+        		<a href="/realisation"><font color="white">REALISATION</font></a>&nbsp;&nbsp;&nbsp;  
+        		<a href="/partenaire"><font color="white">PARTENAIRE</font></a>&nbsp;&nbsp;&nbsp;  
+        		<a href="/garanties"><font color="white">GARANTIES</font></a>&nbsp;&nbsp;&nbsp;	  
+        		<a href="/contact"><font color="white">CONTACT</font></a>&nbsp;&nbsp;&nbsp;  
+        </nav>   
+
 <br><br><br>
-  	<%= yield %>
-    <footer>
+    <div class="yield">
+  	  <%= yield %>
+    </div>
+    <footer class="fixed-bottom">
 			bienvenue sur notre site
 		</footer>	
+<script type="text/javascript">
+    $(document).ready(function() {
+     $(document).scroll(function(){
+     $('nav').toggleClass('scrolled', $(this).scrollTop()>10);
+     });
 
+       $('#myContainer').multiscroll({
+            	sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE'],
+            	anchors: ['first', 'second', 'third'],
+            	menu: '#menu',
+            	navigation: true,
+            	navigationTooltips: ['One', 'Two', 'Three'],
+            	loopBottom: true,
+            	loopTop: true
+            });
+      
+    });
+</script>
 </body>
 </html>
