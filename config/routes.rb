@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   get '/garanties' , to: 'home#garanties' , as: :garanties
 
-  get '/contact' , to: 'home#contact' , as: :contact
+  # get '/contact' , to: 'home#contact' , as: :contact
 
   post '/send-email' , to: 'home#sendemail' , as: :sendemail
 
