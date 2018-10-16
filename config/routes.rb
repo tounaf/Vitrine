@@ -2,13 +2,15 @@ Rails.application.routes.draw do
 
   root to: 'home#index'
 
-  get '/mission' , to: 'home#mission' , as: :'mission_path'
+  get '/mission' , to: 'home#mission' , as: :mission
 
-  get '/realisation' , to: 'home#realisation' , as: :'realisation_path'
+  get '/realisation' , to: 'home#realisation' , as: :realisation
 
-  get 'partenaire' , to: 'home#partenaire', as: :'partenaire_path'
+  get '/partenaire' , to: 'home#partenaire', as: :partenaire
 
-  get 'garanties' , to: 'home#garanties' , as: :'garenties_path'
+  get '/garanties' , to: 'home#garanties' , as: :garenties
 
-  get 'contact' , to: 'home#contact' , as: :'contact_path'
+  get '/contact' , to: 'home#contact' , as: :contact
+  post '/send-email' , to: 'home#sendemail' , as: :sendemail
+
 end
