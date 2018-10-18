@@ -13,7 +13,7 @@
                     </div>
                 </div>
             </div>
-            <div class="main_menu_area">
+            <div class="main_menu_area" style="background-color: transparentize($color:yellow, $amount: 0.7)">
                 <div class="container">
                     <nav class="navbar navbar-default">
                         <!-- Brand and toggle get grouped for better mobile display -->
@@ -28,14 +28,14 @@
                         </div>
 
                         <!-- Collect the nav links, forms, and other content for toggling -->
-                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                            <ul class="nav navbar-nav navbar-right">
-                                <li><a href="<%= presentation_path %>">Présentation</a></li>
-                                <li><a href="<%= garanties_path %>">Garanties</a></li>
-                                <li><a href="<%= realisation_path %>">Réalisation</a></li>  
-                                <li><a href="<%= mission_path %>">Mission</a></li>
-                                <li><a href="<%= partenaire_path %>">Partenaire</a></li>
-                                <li><a href="#" data-toggle="modal" data-target="#exampleModal">Contact</a></li>
+                        <div class="collapse navbar-collapse"  id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav navbar-right ">
+                                <li ><a href="<%= presentation_path %> "  ><font color="blue">Présentation</font> </a></li>
+                                <li><a href="<%= garanties_path %>"><font color="blue">Garanties</font></a></li>
+                                <li><a href="<%= realisation_path %>"><font color="blue">Réalisation</font></a></li>  
+                                <li><a href="<%= mission_path %>"><font color="blue">Mission</font></a></li>
+                                <li><a href="<%= partenaire_path %>"><font color="blue">Partenaire</font></a></li>
+                                <li><a href="#" data-toggle="modal" data-target="#exampleModal"><font color="blue">Contact</font></a></li>
                             </ul>
                         </div><!-- /.navbar-collapse -->
                     </nav>

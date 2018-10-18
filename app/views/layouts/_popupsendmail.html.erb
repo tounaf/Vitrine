@@ -1,27 +1,44 @@
 
-        
+        <body>
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                <h5 class="modal-title" id="exampleModalLabel" style="padding-left: 200px"><font color="blue" size="5"> nous contactez</font></h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 </button>
+                Hainso-trano <br>
+                Addresse: Cnaps, Antananarivo <br>
+                tél: (+261) 34 <br><br>
+                ou envoyer nous une e-mail directe ici <br>
             </div>
             <div class="modal-body">
                 <%= form_tag "/send-email", method: "post" do %>
-                <input type="text" name="name" placeholder="nom complet" />
-                <input type="email" name="email" placeholder="votre email" />
-                 <input type="text" name="addresse" placeholder="addresse" />               
-                <input type="text" name="message" placeholder="votre message" />
-                <input type="submit" value="Envoyer" />
+                      <div class="form-group">
+                        <label for="exampleInputEmail1" style="color:blue">Nom: </label>
+                        <input type="text" class="form-control" name="name" placeholder="votre nom">
+                      </div>
+                          <div class="form-group">
+                        <label for="exampleInputPassword1"style="color:blue">e-Mail: </label>
+                        <input type="text" class="form-control" name="email" ">
+                      </div>
+                        <div class="textarea">
+                            <label for="basic" style="color:blue">Message: </label> <br>
+                        <div>
+                            
+                            <textarea id="basic" name="message" rows="5" cols="50" >
+                            </textarea>
+                        </div>
+                                          
                 
                 <% end %>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">envoyer</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">annuler</button>
             </div>
             </div>
         </div>
         </div>
+        </body>
