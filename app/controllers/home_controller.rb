@@ -10,7 +10,7 @@ class HomeController < ApplicationController
 	def realisation
 	end
 
-	def partenaire
+	def presentation
 	end
 
 	def garanties

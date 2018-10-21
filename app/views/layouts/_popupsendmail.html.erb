@@ -1,4 +1,3 @@
-
         <body>
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -17,28 +16,97 @@
                 <%= form_tag "/send-email", method: "post" do %>
                       <div class="form-group">
                         <label for="exampleInputEmail1" style="color:blue">Nom: </label>
-                        <input type="text" class="form-control" name="name" placeholder="votre nom">
+                        <input type="text" id="name" class="form-control invalid " name="name" placeholder="votre nom" required>
+                        <p class="text-danger error" style="display:none">ce champs ne doit pas depasser de 20 caracteres</p>
                       </div>
+
                           <div class="form-group">
-                        <label for="exampleInputPassword1"style="color:blue">e-Mail: </label>
-                        <input type="text" class="form-control" name="email" ">
-                      </div>
-                        <div class="textarea">
-                            <label for="basic" style="color:blue">Message: </label> <br>
-                        <div>
-                            
-                            <textarea id="basic" name="message" rows="5" cols="50" >
-                            </textarea>
-                        </div>
-                                          
-                
-                <% end %>
-            </div>
+                             <label for="exampleInputPassword1" style="color:blue">e-Mail: </label>
+                            <input type="email" id="email" class="form-control invalid " name="email" placeholder="placez ici votre addresse email" required>
+                            <p1 class="text-danger error" style="display:none">mail invalide</p1>
+                      </div>   
+                      <div class="group">
+                            <label for="exampleInputEmail1" style="color:blue">Message: </label> <br>
+                            <input type="text" id="message" class="form-control invalid " name="message" placeholder="placez ici votre message" required>
+                            <p2 class="text-danger error" style="display:none"><br> ce champs ne doit pas etre vide</p2>
+                        </div> 
+
+
             <div class="modal-footer">
-                <button type="submit" class="btn btn-primary">envoyer</button>
+                <button type="submit" id="send" class="btn btn-primary">envoyer</button>
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">annuler</button>
             </div>
             </div>
+            
+            </div>
+                <% end %>
+         
         </div>
         </div>
+
+
+
+
+
+
+
+        <script src="/lib/js/jquery-2.2.4.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                function validateEmail(email)
+                {
+                    var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    return re.test(email);
+                }
+                $("#name").keyup(function(){
+                    if($(this).val().length>20)
+                    {
+                        $(this).css("border-color","red");
+                        $("p.error").show();
+                    }else if($(this).val().length<=20)
+                    {
+                        $(this).css("border-color", "green");
+                        $("p.error").hide();
+                        $(this).removeClass("invalid");
+                    }
+
+                });
+                $("#email").keyup(function(){
+                    if(!validateEmail($(this).val()))
+                    {
+                        $(this).css("border-color","red");
+                        $("p1.error").show();
+                        
+                    }else if (validateEmail($(this).val()))
+                    {
+                        $(this).css("border-color", "green");
+                        $("p1.error").hide();
+                        $(this).removeClass("invalid");
+                        
+                    }
+                });
+                $("#message").keyup(function(){
+                    if($(this).val().length<1)
+                    {
+                        $(this).css("border-color","red");
+                         $("p2.error").show();
+                    }else {
+                        $(this).css("border-color","green");   
+                        $("p2.error").hide();
+                        $(this).removeClass("invalid");
+                    }
+                });
+                $("#name,#email,#message").keyup(function(){
+                    if($(this).val()==($("invalid")))
+                    {
+                        $("#send").hide();
+                    }else
+                    {
+                        $("#send").show();
+                    }
+                })
+            });
+        </script>
+
         </body>
+

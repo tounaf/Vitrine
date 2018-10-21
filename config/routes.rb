@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
 
-  root to: 'home#index' , as: :presentation
+  root to: 'home#index' , as: :acceuil
 
   get '/mission' , to: 'home#mission' , as: :mission
 
-  get '/realisation' , to: 'home#realisation' , as: :realisation
+  get '/presentation' , to: 'home#presentation' , as: :presentation
 
   get '/partenaire' , to: 'home#partenaire', as: :partenaire
 
