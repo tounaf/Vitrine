@@ -32,6 +32,13 @@
             font:hover{
                 color:yellow;
             }
+            font{
+                font-family: FreeSeref;
+            }
+            font:focus-within{
+                background: red;
+            }
+            
         </style>
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -72,5 +79,18 @@
         <script src="/lib/js/gmaps.min.js"></script>
         
         <script src="/lib/js/theme.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $(window).scroll(function(){
+                    console.log($('font').attr('color'));
+                    if ($(this).scrollTop() > 0 ){
+
+                        // $("nav").css({
+                        //     'background-color','transparentize($color:red, $amount:0.6)',
+                        // });  
+                    } 
+                })
+            });
+        </script>
   </body>
   </html>

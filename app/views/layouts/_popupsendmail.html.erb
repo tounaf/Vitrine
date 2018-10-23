@@ -27,7 +27,8 @@
                       </div>   
                       <div class="group">
                             <label for="exampleInputEmail1" style="color:blue">Message: </label> <br>
-                            <input type="text" id="message" class="form-control invalid " name="message" placeholder="placez ici votre message" required>
+                            <textarea type="text" id="message" name="message" rows="5" cols="30" class="form-control invalid " >
+                            </textarea>                           
                             <p2 class="text-danger error" style="display:none"><br> ce champs ne doit pas etre vide</p2>
                         </div> 
 
@@ -86,7 +87,7 @@
                     }
                 });
                 $("#message").keyup(function(){
-                    if($(this).val().length<1)
+                    if($(this).val().length<30)
                     {
                         $(this).css("border-color","red");
                          $("p2.error").show();
@@ -96,13 +97,13 @@
                         $(this).removeClass("invalid");
                     }
                 });
-                $("#name,#email,#message").keyup(function(){
-                    if($(this).val()==($("invalid")))
-                    {
-                        $("#send").hide();
-                    }else
+                $("#send,#email,#message").keyup(function(){
+                    if(this).removeClass("invalid")==true
                     {
                         $("#send").show();
+                    }else
+                    {
+                        $("#send").hide();
                     }
                 })
             });

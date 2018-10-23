@@ -6,9 +6,7 @@ Rails.application.routes.draw do
 
   get '/presentation' , to: 'home#presentation' , as: :presentation
 
-  get '/partenaire' , to: 'home#partenaire', as: :partenaire
-
-  get '/garanties' , to: 'home#garanties' , as: :garanties
+  get '/realisation' , to: 'home#realisation' , as: :realisation
 
   # get '/contact' , to: 'home#contact' , as: :contact
 
